@@ -26,9 +26,14 @@
 
 http://m.weather.com.cn/atad/xxxxxx.html?time=xxxxx
 
-调用方法
+调用方式
 
 ```Java
+   @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
 
         AsyncHttpAnalyzer httpAnalyzer = new AsyncHttpAnalyzer();
         SampleInterface sampleInterface = HttpAdapter.with(httpAnalyzer).create(SampleInterface.class);
@@ -47,6 +52,8 @@ http://m.weather.com.cn/atad/xxxxxx.html?time=xxxxx
                     }
                 });
 
+
+    }
 
 ```
 
