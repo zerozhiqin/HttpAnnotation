@@ -33,7 +33,7 @@ public class AsyncHttpAnalyzer implements HttpAnalyzer {
 
     @Override
     public void workWith(Context ctx, HttpWorker httpWorker, final HttpCallback callback) {
-
+        Log.v("httpWorker", httpWorker.toString());
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
 
         RequestParams requestParams = new RequestParams();

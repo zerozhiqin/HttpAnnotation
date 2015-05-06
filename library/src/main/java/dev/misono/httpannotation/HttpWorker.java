@@ -6,7 +6,9 @@ import java.util.Iterator;
 
 import dev.misono.httpannotation.annotation.HttpMethod;
 
-
+/**
+ * 包装了注解翻译后的请求相关内容
+ */
 public class HttpWorker {
 
     public HttpWorker(String host, String url, HttpMethod.Type requestType) {
@@ -30,6 +32,7 @@ public class HttpWorker {
 
     private String host;
     private String url;
+
     public HttpMethod.Type requestType;
 
     public ArrayMap<String, String> formats = new ArrayMap<>();
@@ -41,15 +44,15 @@ public class HttpWorker {
 
     @Override
     public String toString() {
-        return "HttpWorker{" +
-                "host='" + host + '\'' +
-                ", url='" + url + '\'' +
-                ", requestType=" + requestType +
-                ", formats=" + formats +
-                ", params=" + params +
-                ", urlEncoding=" + urlEncoding +
-                ", userAgent='" + userAgent + '\'' +
-                ", httpTimeOut=" + httpTimeOut +
-                '}';
+        StringBuffer sb = new StringBuffer(getRequestUrl());
+        if (!params.isEmpty()) {
+            char rec = '?';
+            for (int i = 0; i < params.size(); i++) {
+                sb.append(rec).append(params.keyAt(i)).append("=").append(params.valueAt(i));
+                rec = '&';
+            }
+        }
+
+        return sb.toString();
     }
 }
