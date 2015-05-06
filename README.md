@@ -1,5 +1,6 @@
 # HttpAnnotation
-通过注解方法编写Http接口
+通过注解方法编写Http接口，
+使用HttpAdapter创建接口后即可直接使用
 
 ```Java
 
@@ -21,9 +22,13 @@
 
 ```
 
+调用后访问URL为
+
+http://m.weather.com.cn/atad/xxxxxx.html?time=xxxxx
+
 调用方法
 
-```java
+```Java
 
         AsyncHttpAnalyzer httpAnalyzer = new AsyncHttpAnalyzer();
         SampleInterface sampleInterface = HttpAdapter.with(httpAnalyzer).create(SampleInterface.class);
