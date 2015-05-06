@@ -22,6 +22,10 @@
 
 ```
 
+调用后访问URL为
+
+http://m.weather.com.cn/atad/xxxxxx.html?time=xxxxx
+
 调用方法
 
 ```Java
