@@ -7,7 +7,7 @@ import java.util.Iterator;
 import dev.misono.httpannotation.annotation.HttpMethod;
 
 /**
- * 包装了注解翻译后的请求相关内容
+ * 包装了注解翻译后的请求相关内容worker
  */
 public class HttpWorker {
 
