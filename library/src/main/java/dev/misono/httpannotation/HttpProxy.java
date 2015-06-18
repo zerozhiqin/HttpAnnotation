@@ -15,6 +15,7 @@ import dev.misono.httpannotation.annotation.UrlEncoding;
 import dev.misono.httpannotation.annotation.UserAgent;
 import dev.misono.httpannotation.annotation.WithJson;
 
+//http caller
 public class HttpProxy implements InvocationHandler {
     String host;
     HttpAnalyzer httpAnalyzer;
