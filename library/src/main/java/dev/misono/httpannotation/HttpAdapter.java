@@ -4,6 +4,8 @@ import java.lang.reflect.Proxy;
 
 import dev.misono.httpannotation.annotation.Host;
 
+//Adapter
+
 
 public class HttpAdapter {
     HttpAnalyzer httpAnalyzer;
