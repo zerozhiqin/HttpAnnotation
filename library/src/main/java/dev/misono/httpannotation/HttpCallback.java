@@ -1,6 +1,6 @@
 package dev.misono.httpannotation;
 
 public interface HttpCallback {
-	// call it back
+	// call
     public void callback(String result, Exception e);
 }
